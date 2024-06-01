@@ -27,7 +27,7 @@ class CarouselScreen extends StatelessWidget {
       child: Column(
         children: [
           const CustomAppBar(),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           const Carousel(),
