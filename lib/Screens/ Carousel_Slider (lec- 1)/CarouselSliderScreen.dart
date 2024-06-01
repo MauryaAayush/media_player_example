@@ -34,6 +34,10 @@ class CarouselScreen extends StatelessWidget {
                 return Container(
                   width: MediaQuery.of(context).size.width,
                     margin: const EdgeInsets.symmetric(horizontal: 5),
+                  decoration: BoxDecoration(
+                    color: Colors.amber,
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
 
                     child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
