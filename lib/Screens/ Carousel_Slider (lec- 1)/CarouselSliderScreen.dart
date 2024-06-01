@@ -26,11 +26,11 @@ class CarouselScreen extends StatelessWidget {
               .gradient),
       child: Column(
         children: [
-          CustomAppBar(),
+          const CustomAppBar(),
           SizedBox(
             height: 10,
           ),
-          Carousel(),
+          const Carousel(),
           SizedBox(
             height: 20,
           ),
