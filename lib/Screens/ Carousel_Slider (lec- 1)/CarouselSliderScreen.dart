@@ -50,6 +50,9 @@ class CarouselScreen extends StatelessWidget {
           }).toList(),
           options: CarouselOptions(
             height: 600,
+            autoPlay: true,
+            enlargeCenterPage: true,
+
           ),
         ),
       ),
