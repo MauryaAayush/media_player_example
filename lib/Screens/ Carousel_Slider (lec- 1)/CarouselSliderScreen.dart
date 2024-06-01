@@ -55,7 +55,7 @@ class CarouselScreen extends StatelessWidget {
             aspectRatio: 16/9,
             autoPlayCurve: Curves.linear,
             enableInfiniteScroll: true,
-            autoPlayAnimationDuration: Duration(milliseconds: 10),
+            autoPlayAnimationDuration: const Duration(milliseconds: 1000),
           ),
         ),
       ),
