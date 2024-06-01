@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:media_player_example/Screens/%20Carousel_Slider%20(lec-%201)/model/image&text_Model.dart';
 import 'package:media_player_example/Screens/%20Carousel_Slider%20(lec-%201)/providers/carousal_provider.dart';
 import 'package:provider/provider.dart';
+import 'Components/AppBar.dart';
 import 'Components/Carousel.dart';
 import 'model/gradientModel.dart';
 
@@ -24,7 +25,7 @@ class CarouselScreen extends StatelessWidget {
             gradient: gradientList[Provider.of<CarousalProvider>(context).value].gradient),
           child: Column(
             children: [
-
+                CustomAppBar(),
               SizedBox(
                 height: 10,
               ),
