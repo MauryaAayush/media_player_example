@@ -31,19 +31,27 @@ class CarouselScreen extends StatelessWidget {
               ),
               Carousel(),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ...List.generate(
                       imgTextList.length,
                       (index) => AnimatedContainer(
+                        margin: EdgeInsets.all(2),
                           duration: Duration(milliseconds: 100),
-                        height: Provider.of<CarousalProvider>(context).value == index ? 15 : 10,
-                        width: Provider.of<CarousalProvider>(context).value == index ? 15 : 10,
+                        height: Provider.of<CarousalProvider>(context).value == index ? 13 : 8,
+                        width: Provider.of<CarousalProvider>(context).value == index ? 13 : 8,
 
+                        decoration: BoxDecoration(
+                            // border: Border.all(),
+                            shape: BoxShape.circle,
+                            color: Provider.of<CarousalProvider>(context).value == index
+                                ? gradientList[index].color
+                                : Colors.white.withOpacity(0.5)),
                       ),
-                  ),
+                      ),
 
                 ],
               )
