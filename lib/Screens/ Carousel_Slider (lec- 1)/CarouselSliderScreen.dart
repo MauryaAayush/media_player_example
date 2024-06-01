@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_options.dart';
 import 'package:flutter/material.dart';
 import 'package:media_player_example/Screens/%20Carousel_Slider%20(lec-%201)/model/image&text_Model.dart';
 import 'package:media_player_example/Screens/%20Carousel_Slider%20(lec-%201)/providers/carousal_provider.dart';
