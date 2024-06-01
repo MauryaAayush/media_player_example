@@ -41,7 +41,7 @@ class CarouselScreen extends StatelessWidget {
                 imgTextList.length,
                 (index) => AnimatedContainer(
                   margin: const EdgeInsets.all(2),
-                  duration: Duration(milliseconds: 100),
+                  duration: const Duration(milliseconds: 100),
                   height: Provider.of<CarousalProvider>(context).value == index
                       ? 13
                       : 8,
