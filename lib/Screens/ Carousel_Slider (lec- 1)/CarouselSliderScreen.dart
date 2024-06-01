@@ -1,25 +1,14 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
+import 'model/image&text_Model.dart';
+
 class CarouselScreen extends StatelessWidget {
   const CarouselScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List<String> imgList = [
-      'assets/images/img1.jpg',
-      'assets/images/img2.jpg',
-      'assets/images/img3.jpg',
-      'assets/images/img4.jpg',
-      'assets/images/img5.jpg',
-      'assets/images/img6.jpg',
-      'assets/images/img7.jpg',
-      'assets/images/img8.jpg',
-      'assets/images/img9.jpg',
-      'assets/images/img10.jpg',
-      'assets/images/img11.jpg',
-      'assets/images/img12.jpg',
-    ];
+
 
     return Scaffold(
       appBar: AppBar(
@@ -28,7 +17,7 @@ class CarouselScreen extends StatelessWidget {
       ),
       body: Center(
         child: CarouselSlider(
-          items: imgList.map((item) {
+          items: imgTextList.map((item) {
             return Builder(
               builder: (BuildContext context) {
                 return Container(
