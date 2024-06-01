@@ -19,7 +19,6 @@ class CarouselScreen extends StatelessWidget {
       'assets/images/img10.jpg',
       'assets/images/img11.jpg',
       'assets/images/img12.jpg',
-
     ];
 
     return Scaffold(
@@ -29,29 +28,31 @@ class CarouselScreen extends StatelessWidget {
       ),
       body: Center(
         child: CarouselSlider(
-            items: imgList.map((item) {
-              return Builder(builder: (BuildContext context) {
+          items: imgList.map((item) {
+            return Builder(
+              builder: (BuildContext context) {
                 return Container(
                   width: MediaQuery.of(context).size.width,
-                    margin: const EdgeInsets.symmetric(horizontal: 5),
+                  margin: const EdgeInsets.symmetric(horizontal: 5),
                   decoration: BoxDecoration(
                     color: Colors.amber,
                     borderRadius: BorderRadius.circular(10.0),
                   ),
-
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(item,fit: BoxFit.cover,)),
+                  child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        item,
+                        fit: BoxFit.cover,
+                      )),
                 );
-              },);
-            }).toList(),
-            options: CarouselOptions(
-              height: 600,
-
-            ),
+              },
+            );
+          }).toList(),
+          options: CarouselOptions(
+            height: 600,
+          ),
         ),
       ),
     );
   }
 }
-
