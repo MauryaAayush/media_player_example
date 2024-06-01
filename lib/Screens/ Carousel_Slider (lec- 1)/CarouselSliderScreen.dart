@@ -48,7 +48,7 @@ class CarouselScreen extends StatelessWidget {
                       ? 13
                       : 8,
                   decoration: BoxDecoration(
-                      // border: Border.all(),
+
                       shape: BoxShape.circle,
                       color:
                           Provider.of<CarousalProvider>(context).value == index
