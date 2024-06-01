@@ -2,16 +2,24 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class CarouselScreen extends StatelessWidget {
-  const CarouselScreen({Key? key}) : super(key: key);
+  const CarouselScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     List<String> imgList = [
-      'assets/image1.jpg',
-      'assets/image2.jpg',
-      'assets/image3.jpg',
-      'assets/image4.jpg',
-      'assets/image5.jpg'
+      'assets/images/img1.jpg',
+      'assets/images/img2.jpg',
+      'assets/images/img3.jpg',
+      'assets/images/img4.jpg',
+      'assets/images/img5.jpg',
+      'assets/images/img6.jpg',
+      'assets/images/img7.jpg',
+      'assets/images/img8.jpg',
+      'assets/images/img9.jpg',
+      'assets/images/img10.jpg',
+      'assets/images/img11.jpg',
+      'assets/images/img12.jpg',
+
     ];
 
     return Scaffold(
@@ -21,38 +29,22 @@ class CarouselScreen extends StatelessWidget {
       ),
       body: Center(
         child: CarouselSlider(
-          options: CarouselOptions(
-            height: 400.0,
-            autoPlay: true,
-            enlargeCenterPage: true,
-            aspectRatio: 16 / 9,
-            autoPlayCurve: Curves.fastOutSlowIn,
-            enableInfiniteScroll: true,
-            autoPlayAnimationDuration: Duration(milliseconds: 800),
-            viewportFraction: 0.8,
-          ),
-          items: imgList.map((item) {
-            return Builder(
-              builder: (BuildContext context) {
+            items: imgList.map((item) {
+              return Builder(builder: (BuildContext context) {
                 return Container(
                   width: MediaQuery.of(context).size.width,
-                  margin: EdgeInsets.symmetric(horizontal: 5.0),
-                  decoration: BoxDecoration(
-                    color: Colors.amber,
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10.0),
-                    child: Image.asset(
-                      item,
-                      fit: BoxFit.cover,
-                      width: 1000.0,
-                    ),
-                  ),
+                    margin: const EdgeInsets.symmetric(horizontal: 5),
+
+                    child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset(item,fit: BoxFit.cover,)),
                 );
-              },
-            );
-          }).toList(),
+              },);
+            }).toList(),
+            options: CarouselOptions(
+              height: 600,
+
+            ),
         ),
       ),
     );
