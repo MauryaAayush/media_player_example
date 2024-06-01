@@ -19,44 +19,48 @@ class CarouselScreen extends StatelessWidget {
         //   title: const Text('Carousel Example'),
         // ),
         body: Container(
-          height: double.infinity,
-          width: double.infinity,
-          decoration: BoxDecoration(
-            gradient: gradientList[Provider.of<CarousalProvider>(context).value].gradient),
-          child: Column(
-            children: [
-                CustomAppBar(),
-              SizedBox(
-                height: 10,
-              ),
-              Carousel(),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ...List.generate(
-                      imgTextList.length,
-                      (index) => AnimatedContainer(
-                        margin: EdgeInsets.all(2),
-                          duration: Duration(milliseconds: 100),
-                        height: Provider.of<CarousalProvider>(context).value == index ? 13 : 8,
-                        width: Provider.of<CarousalProvider>(context).value == index ? 13 : 8,
-
-                        decoration: BoxDecoration(
-                            // border: Border.all(),
-                            shape: BoxShape.circle,
-                            color: Provider.of<CarousalProvider>(context).value == index
-                                ? gradientList[index].color
-                                : Colors.white.withOpacity(0.5)),
-                      ),
-                      ),
-
-                ],
-              )
-            ],
+      height: double.infinity,
+      width: double.infinity,
+      decoration: BoxDecoration(
+          gradient: gradientList[Provider.of<CarousalProvider>(context).value]
+              .gradient),
+      child: Column(
+        children: [
+          CustomAppBar(),
+          SizedBox(
+            height: 10,
           ),
-        ));
+          Carousel(),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ...List.generate(
+                imgTextList.length,
+                (index) => AnimatedContainer(
+                  margin: const EdgeInsets.all(2),
+                  duration: Duration(milliseconds: 100),
+                  height: Provider.of<CarousalProvider>(context).value == index
+                      ? 13
+                      : 8,
+                  width: Provider.of<CarousalProvider>(context).value == index
+                      ? 13
+                      : 8,
+                  decoration: BoxDecoration(
+                      // border: Border.all(),
+                      shape: BoxShape.circle,
+                      color:
+                          Provider.of<CarousalProvider>(context).value == index
+                              ? gradientList[index].color
+                              : Colors.white.withOpacity(0.5)),
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
+    ));
   }
 }
