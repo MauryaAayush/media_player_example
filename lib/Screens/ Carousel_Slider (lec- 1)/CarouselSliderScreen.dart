@@ -53,7 +53,9 @@ class CarouselScreen extends StatelessWidget {
             autoPlay: true,
             enlargeCenterPage: true,
             aspectRatio: 16/9,
-            autoPlayCurve: Curves.fastEaseInToSlowEaseOut
+            autoPlayCurve: Curves.linear,
+            enableInfiniteScroll: true,
+            autoPlayAnimationDuration: Duration(milliseconds: 10),
           ),
         ),
       ),
