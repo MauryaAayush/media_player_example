@@ -61,7 +61,8 @@ class VideoCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.3)
+            color: Colors.black.withOpacity(0.9),
+            offset:
           )
         ]
       ),
