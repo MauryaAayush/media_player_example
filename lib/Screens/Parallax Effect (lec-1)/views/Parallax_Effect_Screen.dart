@@ -13,6 +13,8 @@ class ParallaxEffectScreen extends StatefulWidget {
 class _ParallaxEffectScreenState extends State<ParallaxEffectScreen> {
   late PageController _pageController;
 
+  int _selectedIndex = 0;
+
   @override
   void initState() {
     super.initState();
@@ -37,10 +39,18 @@ class _ParallaxEffectScreenState extends State<ParallaxEffectScreen> {
               controller: _pageController,
               itemCount: videos.length,
               itemBuilder: (context, index) {
+                // return Container(
+                //   color: Colors.blue,
+                //   child: Text('hello'),
+                // );
                 return VideoCard(
                   assetPath: videos[index],
+                  isSelected:  _selectedIndex == index,
                 );
               },
+              onPageChanged: (i) => setState(() {
+                _selectedIndex = i;
+              }),
             ),
           ),
         ],
