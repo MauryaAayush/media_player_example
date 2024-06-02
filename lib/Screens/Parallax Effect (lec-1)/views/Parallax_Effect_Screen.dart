@@ -32,16 +32,25 @@ class _ParallaxEffectScreenState extends State<ParallaxEffectScreen> {
         children: [
           SizedBox(
             height: MediaQuery.of(context).size.height*0.7,
-            child: PageView.builder(itemBuilder: (context, index) {
-              return Container(
-                margin: const EdgeInsets.symmetric(vertical: 41,horizontal: 16),
-                color: Colors.red,
-                child: Center(child: Text("Page $index")),
-              );
+            child: PageView.builder(
+              controller: _pageController,
+              itemBuilder: (context, index) {
+              return VideoCard();
             },),
           ),
         ],
       ),
     );
+  }
+}
+
+class VideoCard extends StatelessWidget {
+  const VideoCard({super.key,required this.assetPath});
+
+  final String assetPath;
+
+  @override
+  Widget build(BuildContext context) {
+    return const Card();
   }
 }
