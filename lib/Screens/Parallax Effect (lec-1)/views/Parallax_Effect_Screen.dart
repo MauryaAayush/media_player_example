@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:media_player_example/Screens/Parallax%20Effect%20(lec-1)/model/Video%20List.dart';
 
 class ParallaxEffectScreen extends StatefulWidget {
   const ParallaxEffectScreen({super.key});
@@ -34,9 +35,11 @@ class _ParallaxEffectScreenState extends State<ParallaxEffectScreen> {
             height: MediaQuery.of(context).size.height*0.7,
             child: PageView.builder(
               controller: _pageController,
+              itemCount: videos.length,
               itemBuilder: (context, index) {
-              return VideoCard(assetPath: '',);
-            },),
+              return VideoCard(assetPath: videos[index],);
+            },
+            ),
           ),
         ],
       ),
