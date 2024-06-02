@@ -45,7 +45,9 @@ class _VideoCardState extends State<VideoCard> {
                 offset: const Offset(0, 6),
                 blurRadius: 8)
           ]),
-      child: VideoPlayer(_controller),
+      child: AspectRatio(
+        aspectRatio: _controller.value.aspectRatio,
+          child: VideoPlayer(_controller)),
     );
   }
 }
