@@ -19,6 +19,13 @@ class _VideoCardState extends State<VideoCard> {
   {
     super.initState();
     _controller = VideoPlayerController.asset(widget.assetPath);
+
+    _controller
+    ..addListener(() => setState(() { }))
+    ..setLooping(true)
+    ..setVolume(0)
+    ..initialize().then((value) => setState(() {}))
+    ..play();
   }
 
 
