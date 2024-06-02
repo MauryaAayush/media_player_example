@@ -47,11 +47,16 @@ class _ParallaxEffectScreenState extends State<ParallaxEffectScreen> {
   }
 }
 
-class VideoCard extends StatelessWidget {
+class VideoCard extends StatefulWidget {
   const VideoCard({super.key,required this.assetPath});
 
   final String assetPath;
 
+  @override
+  State<VideoCard> createState() => _VideoCardState();
+}
+
+class _VideoCardState extends State<VideoCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
