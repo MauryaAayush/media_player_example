@@ -27,6 +27,12 @@ class _VideoCardState extends State<VideoCard> {
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 32, horizontal: 16),
