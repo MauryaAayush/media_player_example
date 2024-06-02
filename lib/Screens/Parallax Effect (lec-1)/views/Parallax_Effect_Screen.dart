@@ -35,7 +35,7 @@ class _ParallaxEffectScreenState extends State<ParallaxEffectScreen> {
             child: PageView.builder(
               controller: _pageController,
               itemBuilder: (context, index) {
-              return VideoCard();
+              return VideoCard(assetPath: '',);
             },),
           ),
         ],
