@@ -36,7 +36,7 @@ class _VideoCardState extends State<VideoCard> {
           boxShadow: [
             BoxShadow(
                 color: Colors.black.withOpacity(0.3),
-                offset: Offset(0, 6),
+                offset: const Offset(0, 6),
                 blurRadius: 8)
           ]),
     );
