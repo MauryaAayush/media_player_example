@@ -18,6 +18,7 @@ class _VideoCardState extends State<VideoCard> {
   void initState()
   {
     super.initState();
+    _controller = VideoPlayerController.asset(widget.assetPath);
   }
 
 
