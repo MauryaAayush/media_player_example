@@ -23,9 +23,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
 
-      initialRoute: '/',
+      initialRoute: '/second',
       routes: {
         '/' : (context) => const CarouselScreen(),
+        '/second' : (context) => const CarouselScreen(),
       },
     );
   }
