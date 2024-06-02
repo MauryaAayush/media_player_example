@@ -1,6 +1,6 @@
 
 
-List videos = [
+final videos = [
   'assets/videos/vid1.mp4',
   'assets/videos/vid2.mp4',
   'assets/videos/vid3.mp4',
