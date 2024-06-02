@@ -51,6 +51,20 @@ class VideoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Card();
+    return Container(
+      margin: EdgeInsets.symmetric(
+        vertical: 32,
+        horizontal: 16
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.3)
+          )
+        ]
+      ),
+    );
   }
 }
