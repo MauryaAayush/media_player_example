@@ -85,7 +85,7 @@ class ParallaxFlowDelegate extends FlowDelegate {
   @override
   BoxConstraints getConstraintsForChild(int i, BoxConstraints constraints) {
     return BoxConstraints.tightFor(
-      width: constraints.maxWidth,
+      height: constraints.maxHeight,
     );
   }
 
@@ -102,11 +102,11 @@ class ParallaxFlowDelegate extends FlowDelegate {
     // scrollable area.
     final viewportDimension = scrollable.position.viewportDimension;
     final scrollFraction =
-    (listItemOffset.dy / viewportDimension).clamp(0.0, 1.0);
+    (listItemOffset.dx / viewportDimension).clamp(0.0, 1.0);
 
     // Calculate the vertical alignment of the background
     // based on the scroll percent.
-    final verticalAlignment = Alignment(0.0, scrollFraction * 2 - 1);
+    final verticalAlignment = Alignment( scrollFraction * 2 - 1,0.0);
 
     // Convert the background alignment into a pixel offset for
     // painting purposes.
@@ -121,7 +121,7 @@ class ParallaxFlowDelegate extends FlowDelegate {
     context.paintChild(
       0,
       transform:
-      Transform.translate(offset: Offset(0.0, childRect.top)).transform,
+      Transform.translate(offset: Offset(childRect.left,0.0)).transform,
     );
   }
 
