@@ -33,8 +33,45 @@ class _VideoCardState extends State<VideoCard> {
     super.didUpdateWidget(oldWidget);
     if (!_controller.value.isPlaying) {
       _controller.play(); // Ensure the video is always playing
-    }
+    }else if(!_controller.value.isPlaying)
+      {
+
+      }
+
   }
+
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   _initializeVideoPlayer();
+  // }
+  //
+  // @override
+  // void didUpdateWidget(VideoCard oldWidget) {
+  //   super.didUpdateWidget(oldWidget);
+  //   if (widget.assetPath != oldWidget.assetPath) {
+  //     _controller.dispose();
+  //     _initializeVideoPlayer();
+  //   } else if (widget.isSelected && !_controller.value.isPlaying) {
+  //     _controller.play();
+  //   } else if (!widget.isSelected && _controller.value.isPlaying) {
+  //     _controller.play();
+  //   }
+  // }
+  //
+  // void _initializeVideoPlayer() {
+  //   _controller = VideoPlayerController.asset(widget.assetPath)
+  //     ..initialize().then((_) {
+  //       if (mounted) {
+  //         setState(() {});
+  //       }
+  //       if (widget.isSelected) {
+  //         _controller.play();
+  //       }
+  //     });
+  //   _controller.setLooping(true);
+  // }
+
 
   @override
   void dispose() {
