@@ -76,8 +76,6 @@ class _VideoCardState extends State<VideoCard> {
 }
 
 
-
-
 class ParallaxFlowDelegate extends FlowDelegate {
   ParallaxFlowDelegate({
     required this.scrollable,
