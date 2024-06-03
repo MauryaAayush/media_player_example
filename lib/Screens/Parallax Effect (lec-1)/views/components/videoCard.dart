@@ -24,8 +24,16 @@ class _VideoCardState extends State<VideoCard> {
       ..setVolume(0)
       ..initialize().then((_) {
         setState(() {});
-        _controller.play(); // Ensure the video starts playing only after initialization
+        // _controller.play(); // Ensure the video starts playing only after initialization
       });
+  }
+
+  @override
+  void didUpdateWidget(VideoCard oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (!_controller.value.isPlaying) {
+      _controller.play(); // Ensure the video is always playing
+    }
   }
 
   @override
@@ -40,7 +48,7 @@ class _VideoCardState extends State<VideoCard> {
       duration: Duration(milliseconds: 500),
       margin: widget.isSelected
           ?  const EdgeInsets.symmetric(vertical: 16, horizontal: 4)
-          : const EdgeInsets.symmetric(vertical: 32, horizontal: 16),
+          : const EdgeInsets.symmetric(vertical: 35, horizontal: 16),
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(16),
